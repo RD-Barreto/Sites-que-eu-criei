@@ -1,0 +1,5 @@
+let nextbutton = document.getElementById('next')
+let prevbutton = document.getElementById('prev')
+let container = document.querySelector('conteiner')
+let items = container.querySelectorAll('items')
+let indicador = document.querySelector('indicador')
