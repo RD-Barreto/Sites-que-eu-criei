@@ -1,0 +1,313 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* VARIÁVEIS DE COR */
+:root {
+    --azul: #1e6fa8;
+    --azul-claro: #4bb6e8;
+    --bege: #f3eee7;
+    --verde: #3fbf7f;
+    --texto: #333;
+}
+
+/* ======================
+   CABEÇALHO
+====================== */
+.cabecalho {
+    background: var(--bege);
+    padding: 8px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    column-gap: 200px;
+}
+
+/* LOGO */
+.logo h1 {
+    font-size: 26px;
+    color: var(--azul);
+}
+
+.logo span {
+    color: var(--azul-claro);
+}
+
+.logo p {
+    font-size: 12px;
+    color: var(--texto);
+}
+
+/* AÇÕES TOPO */
+.acoes-topo a {
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 600;
+}
+
+/* BUSCA */
+.busca {
+    display: flex;
+    gap: 10px;
+}
+
+.busca input {
+    width: 220px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.busca button {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    background: var(--verde);
+    color: #fff;
+    cursor: pointer;
+}
+
+.busca button:hover {
+    background: #2fa66a;
+}
+
+/* ======================
+   BANNER
+====================== */
+.banner {
+    position: relative;
+    height: 60vh;
+    background: linear-gradient(to right, #e8f4fa, #d9eef8);
+    overflow: hidden;
+}
+
+/* TEXTO DO BANNER */
+.conteudo-banner {
+    position: absolute;
+    left: 33%;
+    top: 22%;
+    transform: translateY(-50%);
+    max-width: 480px;
+    z-index: 2;
+}
+
+.conteudo-banner h2 {
+    font-family: 'Trattatello', 'fantasy';
+    font-weight: 700;
+    /* negrito */
+    font-size: 2.5rem;
+    color: #1e6fa8;
+    /* branco */
+    text-shadow: 2px 2px 4px #000000;
+    /* sombra preta para contraste */
+    text-align: center;
+    transform: translate(-50%, );
+}
+
+.conteudo-banner h3 {
+    font-family: 'Bebas Neue', 'Anton', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #1e6fa8;
+    text-shadow: 1px 1px 3px #000000;
+    /* leve sombra escura */
+    text-align: center;
+
+}
+
+.conteudo-banner p {
+    font-family: 'Nunito', 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #000;
+    text-shadow: 1px 1px 2px #FFFFFF;
+    text-align: center;
+    z-index: 2;
+}
+
+.botao-acao {
+    padding: 12px 30px;
+    border-radius: 30px;
+    transform: translateX(50%);
+    border: none;
+    background: var(--verde);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 5;
+
+
+}
+
+.botao-acao:hover {
+    background: #2fa66a;
+}
+
+/* IMAGENS DO BANNER */
+.imagem-esquerda {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+.imagem-direita {
+
+    position: absolute;
+    transform: translateY(5%);
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    width: 100%;
+    /* aumenta no eixo X */
+    height: 130%;
+    /* aumenta no eixo Y */
+
+    object-fit: contain;
+    object-position: bottom right;
+    pointer-events: none;
+
+    z-index: 3;
+
+
+}
+
+/* ======================
+   CATEGORIAS
+====================== */
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background: #fff;
+}
+
+.categorias button {
+  background: #e8f4fa;
+  border: 1px solid #b7dff2;
+  border-radius: 30px;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.categorias img {
+    width: 40px;
+}
+
+.infos {
+  background: #f4efe9;
+  padding: 70px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+
+
+
+.sobre {
+  background: #fff;
+  padding: 15px;
+  border: 1px dashed #cfcfcf;
+  border-radius: 12px;
+}
+
+.sobre img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.texto-sobre {
+  margin-top: 15px;
+}
+
+.aniversario {
+  margin-top: 15px;
+  padding: 15px;
+  background: #e8f4fa;
+  border: 1px dashed #4bb6e8;
+  border-radius: 8px;
+}
+
+
+.aniversario strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.beneficios {
+  background: #fff;
+  padding: 25px;
+  border: 1px dashed #cfcfcf;
+  border-radius: 12px;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.item img {
+    width: 48px;
+}
+
+
+.pagamentos-box {
+  grid-column: 1 / -1;
+  background: #fdfbf8;
+  border: 1px dashed #cfcfcf;
+  border-radius: 12px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: center;
+}
+
+.divisor {
+  background: #cfcfcf;
+  width: 1px;
+  height: 100%;
+}
+
+.pagamento h3 {
+  margin-bottom: 15px;
+  color: var(--azul);
+}
+
+
+.pagamento img {
+    max-height: 60px;
+}
+
+.divisor {
+    width: 1px;
+    height: 100%;
+    background: #ccc;
+}
+
+.botao-promocao {
+  background: #6fd3b3;
+  padding: 24px 70px;
+  border-radius: 60px;
+  font-size: 20px;
+  margin: auto 350px;
+  cursor: pointer;
+}
